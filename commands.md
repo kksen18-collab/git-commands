@@ -31,8 +31,16 @@ git checkout <commit-id>
 **Undo Commits**
 
 Revert changes of commit by creating a new commit that includes all the changes that have to be made to undo the changes of the <commit-id>
+The key point — git revert targets what a specific commit changed, not everything after it
 ```shell
 git revert <commit-id>
+```
+
+**Reset**
+
+git reset moves HEAD back to a particular commit - deleting every commit after it thus re-writing history.
+```shell
+git reset --hard <commit-id>
 ```
 
 
