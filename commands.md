@@ -5,12 +5,12 @@ git init
 
 **Add a file to stage**<br>
 ```shell
-git add <file-name><br>
+git add <file-name>
 ```
 
 **Save a snapshot of your staged changes to the local repository's history**<br>
 ```shell
-git commit -m "<commit message><br>
+git commit -m "<commit message>
 ```
 
 **See the commits in the Logs**<br>
@@ -24,7 +24,7 @@ Example: <commit-id> (HEAD->main)<br>
 
 **Move to different commits**<br>
 ```shell
-git checkout <commit-id> <br>
+git checkout <commit-id>
 ```
 **HEAD** is now detached because commits are loaded outside of a branch.<br>
 
