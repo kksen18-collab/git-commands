@@ -10,13 +10,13 @@ git commit -m "<commit message>
 **See the commits in the Logs**
 git log 
 
-**HEAD** is a pointer that tells Git "where you currently are" in the repository's history.
-Example: <commit-id> (HEAD->main)
-main is the branch name.
+**HEAD** is a pointer that tells Git "where you currently are" in the repository's history.<br>
+Example: <commit-id> (HEAD->main)<br>
+main is the branch name.<br>
 
 **Move to different commits**
-git checkout <commit-id> 
-**HEAD** is now detached because commits are loaded outside of a branch.
+git checkout <commit-id> <br>
+**HEAD** is now detached because commits are loaded outside of a branch.<br>
 
 
 
