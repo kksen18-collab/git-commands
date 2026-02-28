@@ -30,7 +30,7 @@ git checkout <commit-id>
 
 **Undo Commits**
 
-Revert changes of commit by creating a new commit that includes all the changes that have to be made to undo the changes of the other commit.
+Revert changes of commit by creating a new commit that includes all the changes that have to be made to undo the changes of the <commit-id>
 ```shell
 git revert <commit-id>
 ```
