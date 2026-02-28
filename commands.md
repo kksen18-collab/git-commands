@@ -41,6 +41,10 @@ git revert <commit-id>
 git reset moves HEAD back to a particular commit - deleting every commit after it thus re-writing history.
 ```shell
 git reset --hard <commit-id>
+
+git reset --mixed <commit-id> #Remaining changes are staged
+
+git reset --soft <commit-id> #Remaining changes are unstaged>
 ```
 
 
