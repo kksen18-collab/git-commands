@@ -22,11 +22,19 @@ git log
 Example: <commit-id> (HEAD->main)<br>
 - main is the branch name.<br>
 
-**Move to different commits**<br>
+**Move to another commits**<br>
 ```shell
 git checkout <commit-id>
 ```
 **HEAD** is now detached because commits are loaded outside of a branch.<br>
+
+**Undo Commits**
+
+Revert changes of commit by creating a new commit that includes all the changes that have to be made to undo the changes of the other commit.
+```shell
+git revert <commit-id>
+```
+
 
 
 
