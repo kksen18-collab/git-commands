@@ -16,7 +16,7 @@ Example: <commit-id> (HEAD->main)<br>
 
 **Move to different commits**<br>
 - git checkout <commit-id> <br>
-**HEAD** is now detached because commits are loaded outside of a branch.<br>
+HEAD is now detached because commits are loaded outside of a branch.<br>
 
 
 
