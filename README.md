@@ -1,2 +1,2 @@
 # git-commands
-A list of all git commands
+This repo contains concepts of git and all git commands.
