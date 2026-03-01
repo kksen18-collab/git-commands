@@ -61,3 +61,9 @@ git checkout -b <branch-name>
 ```shell
 git branch -d <branch name>
 ```
+
+**Links remote repo to local repo**
+
+```shell
+git remote add <git url>
+```
