@@ -46,6 +46,23 @@ git reset --mixed <commit-id> #Remaining changes are staged
 
 git reset --soft <commit-id> #Remaining changes are unstaged>
 ```
+**Create new branch**
+
+```shell
+git branch <branch-name>
+git checkout <branch-name>
+
+(or)
+
+git checkout -b <branch-name>
+```
+**Delete branch**
+
+```shell
+git branch -d <branch name>
+```
+
+
 
 
 
