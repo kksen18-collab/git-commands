@@ -1,0 +1,135 @@
+# Git Fork vs Clone
+
+## Clone
+
+Copies a repo to your local machine. You push directly back to the **same repo**.
+
+```
+GitHub repo  →  clone  →  local repo  →  push  →  same GitHub repo
+```
+
+```bash
+git clone https://github.com/username/my-repo.git
+# make changes
+git push origin main  # pushes back to the original repo
+```
+
+Used when you **have write access** to the repo (your own repo or a team repo).
+
+---
+
+## Fork
+
+Copies someone else's repo into **your own GitHub account**, then you clone your fork. You push to your fork, not the original.
+
+```
+original repo  →  fork  →  your GitHub copy  →  clone  →  local  →  push  →  your GitHub copy
+```
+
+```bash
+# 1. fork on GitHub (click Fork button)
+
+# 2. clone YOUR fork
+git clone https://github.com/YOUR_username/their-repo.git
+
+# 3. make changes and push to YOUR fork
+git push origin main
+
+# 4. open a Pull Request → asking the original repo to accept your changes
+```
+
+Used when you **don't have write access** — open source contributions, for example.
+
+---
+
+## Key Difference
+
+| | Clone | Fork |
+|---|---|---|
+| Where you push | Original repo | Your copy on GitHub |
+| Need write access | ✅ Yes | ❌ No |
+| Used for | Team projects, your own repos | Open source contributions |
+| Pull Request needed | Usually no | Yes, to contribute back |
+
+---
+
+## Fork + Upstream Pattern
+
+When you fork, it's common to also track the **original repo** as `upstream` so you can pull in new changes from it:
+
+```bash
+# after cloning your fork, add the original as upstream
+git remote add upstream https://github.com/original-owner/their-repo.git
+
+# check your remotes
+git remote -v
+# origin    https://github.com/YOUR_username/their-repo.git (your fork)
+# upstream  https://github.com/original-owner/their-repo.git (original)
+
+# pull latest changes from original repo
+git fetch upstream
+git merge upstream/main
+
+# push updated code to your fork
+git push origin main
+```
+
+```
+original repo (upstream)  →  fetch/merge  →  your local  →  push  →  your fork (origin)
+```
+
+This keeps your fork in sync with the original repo.
+
+---
+
+## Typical Open Source Workflow
+
+```bash
+# 1. fork on GitHub
+
+# 2. clone your fork
+git clone https://github.com/YOUR_username/their-repo.git
+cd their-repo
+
+# 3. add upstream
+git remote add upstream https://github.com/original-owner/their-repo.git
+
+# 4. create a feature branch
+git checkout -b my-feature
+
+# 5. make changes and commit
+git add .
+git commit -m "Add my feature"
+
+# 6. push to your fork
+git push origin my-feature
+
+# 7. open a Pull Request on GitHub
+# your fork → their repo
+```
+
+---
+
+## Quick Reference
+
+```bash
+# clone a repo
+git clone https://github.com/username/repo.git
+
+# add upstream after forking
+git remote add upstream https://github.com/original/repo.git
+
+# sync fork with original
+git fetch upstream
+git merge upstream/main
+git push origin main
+
+# check all remotes
+git remote -v
+```
+
+---
+
+## Golden Rule
+
+> **Clone** when you have write access. **Fork** when you don't.
