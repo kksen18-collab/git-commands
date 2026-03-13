@@ -65,5 +65,5 @@ git branch -d <branch name>
 **Links remote repo to local repo**
 
 ```shell
-git remote add <git url>
+git remote add origin <git url>
 ```
